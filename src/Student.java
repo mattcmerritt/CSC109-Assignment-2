@@ -32,6 +32,21 @@ public class Student {
 			return (pointsEarned / (double) totalPoints) * 100;
 	}
 	
+	// getting grade as a letter
+	public char getCurrentLetterGrade() {
+		double grade = getCurrentAverage();
+		if (grade >= 90)
+			return 'A';
+		else if (grade >= 80)
+			return 'B';
+		else if (grade >= 70)
+			return 'C';
+		else if (grade >= 60)
+			return 'D';
+		else 
+			return 'F';
+	}
+	
 	// toString to return name, email, and currentAverage
 	public String toString() {
 		return name + " (Email: " + email + "), Year " + year + ", Average: " + getCurrentAverage();
